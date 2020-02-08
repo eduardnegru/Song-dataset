@@ -1,0 +1,104 @@
+README Negru Adrian Eduard SCPD
+
+****TASK1****
+
+Pentru task-ul 1 am calculat loudness-ul mediu pentru melodiile care au aparut in acelasi an. Am mapat
+fiecare an la un Pair care contine perechea (loudness, 1). Am folosit reduceByKey pentru a calcula
+suma totala a loudness-ului si numarul de melodii care aparin anului respectiv. La final am calculat
+media folosind datele din structura Pair.
+
+
+Valorile obtinute in urma analizei
+
+1926 -21.6725
+1927 -16.135
+1929 -14.873
+1930 -16.751
+1934 -30.53
+1935 -17.0835
+1936 -10.697
+1940 -18.69
+1947 -19.4945
+1950 -16.472
+1953 -12.39625
+1954 -9.302
+1955 -16.252
+1956 -12.802571
+1957 -12.057
+1958 -12.375999
+1959 -14.741333
+1960 -12.523555
+1961 -14.294858
+1962 -11.003751
+1963 -9.781266
+1964 -13.108383
+1965 -12.373875
+1966 -11.669583
+1967 -13.6201725
+1968 -12.872261
+1969 -9.865
+1970 -11.928474
+1971 -12.152999
+1972 -11.719292
+1973 -11.711543
+1974 -10.670681
+1975 -11.249541
+1976 -11.658401
+1977 -11.820116
+1978 -10.1125
+1979 -11.879086
+1980 -11.098532
+1981 -11.570446
+1982 -11.348741
+1983 -12.302874
+1984 -12.015031
+1985 -10.313735
+1986 -11.36973
+1987 -11.076636
+1988 -10.131917
+1989 -12.034439
+1990 -11.943763
+1991 -11.811506
+1992 -11.024284
+1993 -12.354692
+1994 -11.604363
+1995 -10.306579
+1996 -10.586193
+1997 -10.465016
+1998 -10.4263115
+1999 -8.975899
+2000 -9.551839
+2001 -8.419865
+2002 -9.05047
+2003 -8.667015
+2004 -8.482973
+2005 -8.86555
+2006 -8.347532
+2007 -8.019222
+2008 -7.8792095
+2009 -8.194217
+2010 -8.11114
+
+Se poate observa ca datele inainte de 1960 nu sunt continue si lipsesc anumiti ani din analiza(de exemplu 1930-1934, 1940-1947) . De aici rezulta punctele pe axa x lipsesc. De aceea se pot observa acele spike-uri in partea stanga a ecranului. Sper ca la asta va referiti :)
+
+****Task2****
+
+Am calculat valorile pentru loudness si tempo pentru cantecele care au mode=0 si mode=1. In urma analizei datelor si a constructiei graficului in care am comparat folosirea minor-key cu major-key pentru
+ambele metrici, am observat ca atat pentru tempo cat si pentru loudness valorile sunt mai mici in cazul cantecelor cu minor key decat in cazul cantecelor cu major key. In grafic am afisat fiecare valoare(tempo, loudness) sortata crescator si se poate observa ca pentru ambele metrici graficul pentru minor key este peste graficul cu major key deci si valorile medii sunt mai mari incazul minor key decat in cazul major key. Prin urmare presupunerea facuta nu este adevarata conform setului de date.
+
+
+****Task3****
+
+Pentru task-ul 3 am folsit urmatoarea euristica:
+
+xi = (100 / maxImportance) * currentImportance.
+
+In acest fel obtin valori intre 1 si 100. Logica este similra cu a spune cat de sigur sunt ca genul respectiv face parte din genul pe care l-am ales programatic. Am ales-o pentru ca mi s-a parut cea mai
+simpla metoda, a fost prima solutie la care m-am gandit si mi se pare usor de implementat. Penultima coloana are numai valori de 0 pentru ca nu exista melodii care sa apartina acelui gen.
+
+
+
+
+
+
+
